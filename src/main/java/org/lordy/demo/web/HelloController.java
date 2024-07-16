@@ -1,5 +1,6 @@
 package org.lordy.demo.web;
 
+import cn.dev33.satoken.stp.StpUtil;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Flux;
@@ -8,21 +9,21 @@ import reactor.core.publisher.Flux;
 public class HelloController {
 
 
-    @GetMapping("/")
-    public Flux<String> hello(){
-        return Flux.just("hello");
-    }
 
 
     @GetMapping("/login")
-    public Flux<String> login(){
-        return Flux.just("login");
+    public Flux<String> login(String username, String password){
+        if("zhang".equals(username) && "123456".equals(password)) {
+            StpUtil.login(10001);
+            return Flux.just("success");
+        }
+        return Flux.just("fail");
     }
 
 
-    @GetMapping("/api/private")
-    public Flux<String> privateMessage(){
-        return Flux.just("private");
+    @GetMapping("/isLogin")
+    public Flux<Boolean> privateMessage(){
+        return Flux.just(StpUtil.isLogin());
     }
 
 
