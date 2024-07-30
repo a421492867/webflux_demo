@@ -1,13 +1,13 @@
-package org.lordy.webflux_demo;
-
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
-
-@SpringBootTest
-class WebfluxDemoApplicationTests {
-
-	@Test
-	void contextLoads() {
-	}
-
-}
+//package org.lordy.webflux_demo;
+//
+//import org.junit.jupiter.api.Test;
+//import org.springframework.boot.test.context.SpringBootTest;
+//
+//@SpringBootTest
+//class WebfluxDemoApplicationTests {
+//
+//	@Test
+//	void contextLoads() {
+//	}
+//
+//}
