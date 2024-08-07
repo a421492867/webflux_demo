@@ -26,5 +26,10 @@ public class HelloController {
         return Flux.just(StpUtil.isLogin());
     }
 
+    @GetMapping("/logout")
+    public Flux<Boolean> logout(){
+        StpUtil.logout();
+        return Flux.empty();
+    }
 
 }
